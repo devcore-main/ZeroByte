@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zero Byte — We partner with organizations and experts to drive cybersecurity excellence. Join our mission as a collaborator.">
+    <title>Collaborations — Zero Byte Cybersecurity Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="image.png" alt="Zero Byte" class="logo-img">
+                Zero<span>Byte</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="collaboration.html" class="active">Collaborations</a>
+                <a href="contact.html">Contact</a>
+                <a href="pricing.html" class="nav-cta arabic">احجز الآن</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== COLLAB HERO ===== -->
+    <section class="hero section" id="collab-hero" style="min-height: 40vh; padding-top: 150px;">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Building Ecosystems</span>
+                </div>
+                <h1>Strategic <span class="gradient-text">Partnerships</span></h1>
+                <p class="hero-arabic">
+                    نتعاون مع المؤسسات والخبراء لتعزيز سبل التعاون والابتكار في مجال الأمن السيبراني.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OUR PARTNERS ===== -->
+    <section class="partners section reveal">
+        <div class="container">
+            <div class="section-label">Our Network</div>
+            <h2 class="section-title">Current <span class="gradient-text">Collaborations</span></h2>
+            
+            <div class="collab-grid">
+                <div class="collab-card">
+                    <div class="collab-logo">🛡️</div>
+                    <h4>Global Security Lab</h4>
+                    <p>Strategic research partner for advanced threat intelligence.</p>
+                </div>
+                <div class="collab-card">
+                    <div class="collab-logo">💻</div>
+                    <h4>Cyber Training Hub</h4>
+                    <p>Providing infrastructure for our specialized SOC labs.</p>
+                </div>
+                <div class="collab-card">
+                    <div class="collab-logo">🌐</div>
+                    <h4>Ethical Hacker Corp</h4>
+                    <p>Collaborating on offensive security tools and methodologies.</p>
+                </div>
+                <div class="collab-card">
+                    <div class="collab-logo">🏛️</div>
+                    <h4>Security Institute</h4>
+                    <p>Educational partner for certification cross-recognition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PARTNERSHIP FORM ===== -->
+    <section class="application section reveal" id="apply">
+        <div class="container">
+            <div class="section-label text-center">Join Us</div>
+            <h2 class="section-title text-center">Become a <span class="gradient-text">Collaborator</span></h2>
+            
+            <div class="modal" style="display: block; position: relative; max-width: 800px; margin: 40px auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                <div class="modal-body">
+                    <form id="collabForm" onsubmit="handleCollabSubmission(event)">
+                        <div class="contact-wrapper" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 0;">
+                            <div class="form-group">
+                                <label>Organization / Name *</label>
+                                <input type="text" id="collabName" placeholder="Example: Tech Security Ltd" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="collabEmail" placeholder="partner@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Type of Collaboration</label>
+                            <select id="collabType" style="width: 100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-primary); border-radius: var(--border-radius);">
+                                <option value="training">Training Partner</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="sponsorship">Sponsorship</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tell us about your proposal</label>
+                            <textarea id="collabMessage" rows="5" placeholder="How can we work together?"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn" style="background: linear-gradient(135deg, var(--neon-blue), #0099cc);">Send Proposal →</button>
+                        <div class="form-status" id="collabStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="image.png" alt="Zero Byte" class="logo-img-footer">
+                    Zero<span>Byte</span>
+                </div>
+                <p>© 2026 Zero Byte Cybersecurity Academy. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="collaboration.html">Collaborations</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zero Byte — Clear and transparent pricing for our cybersecurity training programs. Choose from cash or flexible installment plans.">
+    <title>Pricing Plans — Zero Byte Cybersecurity Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="image.png" alt="Zero Byte" class="logo-img">
+                Zero<span>Byte</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html" class="active">Pricing</a>
+                <a href="collaboration.html">Collaborations</a>
+                <a href="contact.html">Contact</a>
+                <a href="pricing.html" class="nav-cta arabic">احجز الآن</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== PRICING HERO ===== -->
+    <section class="hero section" id="pricing-hero" style="min-height: 40vh; padding-top: 150px;">
+        <div class="container">
+            <div class="hero-content text-center" style="max-width: 100%;">
+                <div class="hero-badge" style="margin: 0 auto 28px auto;">
+                    <span class="pulse-dot"></span>
+                    <span>Transparent Pricing</span>
+                </div>
+                <h1>Invest in Your <span class="gradient-text">Future</span></h1>
+                <p class="hero-arabic" style="margin: 0 auto 40px auto; text-align: center;">
+                    خطة واحدة كاملة — اختر طريقة الدفع التي تناسب ميزانيتك.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing section reveal" id="pricing" style="padding-top: 0;">
+        <div class="container">
+            <div class="pricing-single">
+                <!-- Payment Toggle -->
+                <div class="payment-toggle">
+                    <button class="toggle-btn active" id="toggleCash" onclick="selectPaymentPlan('cash')">
+                        <span class="toggle-icon">💰</span>
+                        <span class="toggle-label">كاش</span>
+                    </button>
+                    <button class="toggle-btn" id="toggleInstallment" onclick="selectPaymentPlan('installment')">
+                        <span class="toggle-icon">📅</span>
+                        <span class="toggle-label">تقسيط</span>
+                    </button>
+                </div>
+
+                <!-- Cash Plan Display -->
+                <div class="plan-display" id="cashDisplay">
+                    <div class="plan-badge-inline">🔥 أفضل عرض — وفر 600 جنيه</div>
+                    <div class="plan-main-price">
+                        <span class="price-big">2,500</span>
+                        <span class="price-currency-big">EGP</span>
+                    </div>
+                    <div class="price-was">بدلاً من <span class="strikethrough">3,100 EGP</span></div>
+                    <ul class="plan-perks">
+                        <li>✅ كل الموديولات (10 موديولات)</li>
+                        <li>✅ خصم 600 جنيه</li>
+                        <li>✅ دفعة واحدة — ابدأ فوراً</li>
+                        <li>✅ شهادة إتمام الكورس</li>
+                        <li>✅ دعم VIP</li>
+                    </ul>
+                </div>
+
+                <!-- Installment Plan Display -->
+                <div class="plan-display hidden" id="installmentDisplay">
+                    <div class="plan-badge-inline installment-badge">📅 نظام التقسيط — بدون خصم</div>
+                    <div class="plan-main-price">
+                        <span class="price-big">3,000</span>
+                        <span class="price-currency-big">EGP</span>
+                    </div>
+                    <div class="price-was">على 3 أقساط</div>
+                    <div class="installment-breakdown">
+                        <div class="installment-step">
+                            <div class="step-num">1</div>
+                            <div class="step-info">
+                                <strong>1,000 EGP</strong>
+                                <span>في بداية الكورس</span>
+                            </div>
+                        </div>
+                        <div class="installment-step">
+                            <div class="step-num">2</div>
+                            <div class="step-info">
+                                <strong>1,000 EGP</strong>
+                                <span>بعد أول شهر</span>
+                            </div>
+                        </div>
+                        <div class="installment-step">
+                            <div class="step-num">3</div>
+                            <div class="step-info">
+                                <strong>1,000 EGP</strong>
+                                <span>قبل نهاية الكورس</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="plan-perks">
+                        <li>✅ كل الموديولات (10 موديولات)</li>
+                        <li>✅ ادفع على 3 مراحل</li>
+                        <li>✅ شهادة إتمام الكورس</li>
+                        <li>✅ دعم مستمر</li>
+                    </ul>
+                </div>
+
+                <button class="plan-cta-btn" id="mainBookBtn" onclick="openBookingModal()">
+                    احجز مكانك الآن →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="image.png" alt="Zero Byte" class="logo-img-footer">
+                    Zero<span>Byte</span>
+                </div>
+                <p>© 2026 Zero Byte Cybersecurity Academy. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="collaboration.html">Collaborations</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS (Booking & Installment) -->
+    <!-- [Include modals from index.html here for multi-page functionality] -->
+    <!-- I will add logic to app.js to handle these globally or just include them in every page that needs them -->
+    <!-- For simplicity in this turn, I'll include the booking modal here as well. -->
+    
+    <!-- ===== BOOKING MODAL ===== -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>📝 <span class="gradient-text">Booking Form</span></h3>
+                <button class="modal-close" onclick="closeBookingModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm" onsubmit="submitBooking(event)">
+                    <!-- Form fields same as index.html -->
+                    <div class="form-group">
+                        <label>الاسم الثلاثي *</label>
+                        <input type="text" id="formName" placeholder="مثال: أحمد محمد علي" required>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني *</label>
+                        <input type="email" id="formEmail" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الواتساب *</label>
+                        <input type="tel" id="formPhone" placeholder="01xxxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label>طريقة الدفع</label>
+                        <input type="text" id="formPlan" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>المبلغ المطلوب الآن</label>
+                        <input type="text" id="formTotal" readonly>
+                    </div>
+                    <div class="payment-info">
+                        <h4>💳 تعليمات الدفع</h4>
+                        <p style="color:var(--text-secondary);margin-bottom:12px;font-size:0.9rem;">يرجى تحويل المبلغ الموضح على الرقم التالي:</p>
+                        <ul>
+                            <li>📱 اتصالات كاش: <strong>01118501275</strong></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>صورة إيصال التحويل *</label>
+                        <div class="file-upload-area" id="fileUploadArea">
+                            <input type="file" id="formReceipt" accept="image/*" required onchange="handleFileSelect(this, 'fileName', 'fileUploadArea')">
+                            <div class="file-upload-icon">📎</div>
+                            <div class="file-upload-text">اضغط هنا أو اسحب صورة الإيصال</div>
+                            <div class="file-upload-name" id="fileName"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit-btn" id="submitBtn">تأكيد الحجز ✓</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
